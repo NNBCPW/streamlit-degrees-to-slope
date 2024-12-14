@@ -29,58 +29,14 @@ st.markdown("""
    - Switch from radian mode if necessary.
 2. **Enter the angle in degrees.**
    - Example: For 6 degrees, type `6`.
-3. **Press the TAN button.**
+3. **Press the `TAN` button.**
    - This gives the tangent of the angle.
 4. **Multiply the result by 100 to get the percentage.
 """)
-
-# Add scrolling ticker
-ticker_message = "This app is in Beta mode, Please email me if it's not working"
-
-st.markdown(
-    f"""
-    <style>
-    .ticker {{
-        position: fixed;
-        bottom: 40px;
-        width: 100%;
-        background-color: black;
-        color: white;
-        overflow: hidden;
-        z-index: 9999;
-    }}
-    .ticker-text {{
-        white-space: nowrap;
-        animation: ticker-animation 20s linear infinite; /* Slower speed: 20 seconds */
-        padding: 10px;
-        font-size: 18px;
-    }}
-    @keyframes ticker-animation {{
-        0% {{ transform: translateX(100%); }}
-        100% {{ transform: translateX(-100%); }}
-    }}
-    </style>
-    <div class="ticker">
-        <div class="ticker-text">{ticker_message}</div>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
-
-# Add "Created by" text
+# Add "Created by" text at the very bottom
 st.markdown(
     """
-    <style>
-    .created-by {
-        position: fixed;
-        bottom: 10px;
-        width: 100%;
-        text-align: center;
-        font-size: 12px;
-        color: gray;
-    }
-    </style>
-    <div class="created-by">
+    <div style="text-align: center; font-size: 12px; margin-top: 20px; color: gray;">
         Created by: NN
     </div>
     """,
