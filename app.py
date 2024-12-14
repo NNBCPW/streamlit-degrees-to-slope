@@ -29,7 +29,31 @@ st.markdown("""
    - Switch from radian mode if necessary.
 2. **Enter the angle in degrees.**
    - Example: For 6 degrees, type `6`.
-3. **Press the `TAN` button.**
+3. **Press the TAN button.**
    - This gives the tangent of the angle.
 4. **Multiply the result by 100 to get the percentage.
 """)
+
+# Add scrolling ticker at the bottom
+ticker_message = "This is a scrolling ticker. Add updates, announcements, or notes here!"
+
+st.markdown(
+    f"""
+    <div style="position: fixed; bottom: 0; width: 100%; background-color: black; color: white; overflow: hidden; z-index: 9999;">
+        <marquee style="padding: 10px; font-size: 18px;" behavior="scroll" direction="left">
+            {App is in beta for ongoing testing}
+        </marquee>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+
+# Add "Created by" text at the very bottom
+st.markdown(
+    """
+    <div style="text-align: center; font-size: 12px; margin-top: 20px; color: gray;">
+        Created by: NN
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
