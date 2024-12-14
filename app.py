@@ -34,24 +34,53 @@ st.markdown("""
 4. **Multiply the result by 100 to get the percentage.
 """)
 
-# Add scrolling ticker at the bottom
+# Add scrolling ticker
 ticker_message = "This is a scrolling ticker. Add updates, announcements, or notes here!"
 
 st.markdown(
     f"""
-    <div style="position: fixed; bottom: 0; width: 100%; background-color: black; color: white; overflow: hidden; z-index: 9999;">
-        <marquee style="padding: 10px; font-size: 18px;" behavior="scroll" direction="left">
-            {App is in beta for ongoing testing}
-        </marquee>
+    <style>
+    .ticker {{
+        position: fixed;
+        bottom: 40px;
+        width: 100%;
+        background-color: black;
+        color: white;
+        overflow: hidden;
+        z-index: 9999;
+    }}
+    .ticker-text {{
+        white-space: nowrap;
+        animation: ticker-animation 10s linear infinite;
+        padding: 10px;
+        font-size: 18px;
+    }}
+    @keyframes ticker-animation {{
+        0% {{ transform: translateX(100%); }}
+        100% {{ transform: translateX(-100%); }}
+    }}
+    </style>
+    <div class="ticker">
+        <div class="ticker-text">{ticker_message}</div>
     </div>
     """,
     unsafe_allow_html=True,
 )
 
-# Add "Created by" text at the very bottom
+# Add "Created by" text
 st.markdown(
     """
-    <div style="text-align: center; font-size: 12px; margin-top: 20px; color: gray;">
+    <style>
+    .created-by {
+        position: fixed;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+        color: gray;
+    }
+    </style>
+    <div class="created-by">
         Created by: NN
     </div>
     """,
