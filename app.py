@@ -35,7 +35,7 @@ st.markdown("""
 """)
 
 # Add scrolling ticker
-ticker_message = "This is a scrolling ticker. Add updates, announcements, or notes here!"
+ticker_message = "This is app is still in Beta Mode"
 
 st.markdown(
     f"""
@@ -51,7 +51,7 @@ st.markdown(
     }}
     .ticker-text {{
         white-space: nowrap;
-        animation: ticker-animation 10s linear infinite;
+        ticker-animation 20s linear infinite;
         padding: 10px;
         font-size: 18px;
     }}
