@@ -36,8 +36,10 @@ st.markdown("""
 # Add "Created by" text at the very bottom
 st.markdown(
     """
-    <div style="text-align: center; font-size: 12px; margin-top: 20px; color: gray;">
-        Created by: NN
+   st.write("---")
+    st.write("Created by: NN")
+    st.markdown(
+        "For support, please [email me](mailto:nicholas.nabholz@bexar.org?subject=Support%20for%20Percentage%20to%20Length%20and%20Inches%20Calculator)."
     </div>
     """,
     unsafe_allow_html=True,
