@@ -33,13 +33,15 @@ st.markdown("""
    - This gives the tangent of the angle.
 4. **Multiply the result by 100 to get the percentage.
 """)
-# Add "Created by" text at the very bottom
+# Footer directly added at the end
 st.markdown(
     """
-   st.write("---")
-    st.write("Created by: NN")
-    st.markdown(
-        "For support, please [email me](mailto:nicholas.nabholz@bexar.org?subject=Support%20for%20Percentage%20to%20Length%20and%20Inches%20Calculator)."
+    <div style="width: 100%; background-color: black; color: white; text-align: center; padding: 10px; margin-top: 20px;">
+        Created by: NN <br>
+        <a href="mailto:Nicholas.nabholz@bexar.org?subject=Feedback%20on%20BCPW%20Elevation%20Calc&body=Hello,%0A%0AI%20would%20like%20to%20provide%20feedback%20on%20the%20app.%0A%0A" 
+           style="color: white; text-decoration: none;">
+            For support, please email me. Thanks!
+        </a>
     </div>
     """,
     unsafe_allow_html=True,
