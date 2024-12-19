@@ -38,11 +38,11 @@ def main():
     # Additional Calculation: Grade of a Road
     st.write("---")
     st.write("### How Do You Calculate the Grade of a Road?")
-    st.write("Let's assume that the road has 12 meters of rise for every 200 meters of run.")
+    st.write("Let's assume that the road has 39.37 feet of rise for every 656.17 feet of run.")
 
     # Inputs for rise and run
-    rise = st.number_input("Enter the rise (in meters)", min_value=0.0, step=0.1)
-    run = st.number_input("Enter the run (in meters)", min_value=0.0, step=0.1)
+    rise = st.number_input("Enter the rise (in feet)", min_value=0.0, step=0.1)
+    run = st.number_input("Enter the run (in feet)", min_value=0.0, step=0.1)
 
     if rise > 0 and run > 0:
         grade = rise / run
