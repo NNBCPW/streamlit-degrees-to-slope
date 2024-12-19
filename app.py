@@ -33,6 +33,19 @@ st.markdown("""
    - This gives the tangent of the angle.
 4. **Multiply the result by 100 to get the percentage.
 """)
+ # Inputs for rise and run
+    rise = st.number_input("Enter the rise (in meters)", min_value=0.0, step=0.1)
+    run = st.number_input("Enter the run (in meters)", min_value=0.0, step=0.1)
+
+    if rise > 0 and run > 0:
+        grade = rise / run
+        slope_angle = math.degrees(math.atan(grade))
+        slope_percentage = grade * 100
+
+        st.write("### Results")
+        st.write(f"Grade: {grade:.4f}")
+        st.write(f"Slope (angle): {slope_angle:.2f}°")
+        st.write(f"Slope (percentage): {slope_percentage:.2f}%")
 # Footer directly added at the end
 st.markdown(
     """
