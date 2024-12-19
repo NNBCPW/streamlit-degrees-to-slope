@@ -54,6 +54,16 @@ def main():
         st.write(f"Slope (angle): {slope_angle:.2f}°")
         st.write(f"Slope (percentage): {slope_percentage:.2f}%")
 
+    st.markdown("""
+    **Note:** To calculate the grade of a road on a calculator:
+    1. Divide the rise (in feet) by the run (in feet) to get the grade as a ratio.
+       - Example: For 39.37 feet rise and 656.17 feet run: `grade = 39.37 / 656.17 = 0.06`.
+    2. To find the angle of the slope, use the arctangent function: `angle = arctan(grade)`.
+       - Example: `angle = arctan(0.06) = 3.43°`.
+    3. To express the slope as a percentage, multiply the grade by 100: `slope (%) = grade × 100`.
+       - Example: `slope (%) = 0.06 × 100 = 6%`.
+    """)
+
     # Footer directly added at the end
     st.markdown(
         """
@@ -70,3 +80,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
